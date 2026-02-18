@@ -23,7 +23,7 @@ At this point, you should have
 
 1.  Login to your [Github](https://github.com/) account.
 
-1.  Fork [this repository](https://github.com/joaks1/python-translation-exercise), by
+1.  Fork [this repository](https://github.com/joaks1/python-translation-project), by
     clicking the 'Fork' button on the upper right of the page.
 
     After a few seconds, you should be looking at *your* 
@@ -220,7 +220,7 @@ You can run the tests for each function separately:
 
 These commands will run the tests for the functions `vet_nucleotide_sequence`,
 `vet_codon`, and `find_first_orf`, respectively.
-It can be helpful to only run the tests for the function your working on.
+It can be helpful to only run the tests for the function you're working on.
 
 **Start with the** `vet_nucleotide_sequence` **and** `vet_codon` **functions
 first**.
@@ -257,12 +257,12 @@ You can give the script a nucleotide sequence to search at the command line:
 
 The sequence can also be provided in a file if you specify the `-p` flag:
 
-    $ python3 find_orf.py -p path-to-a-file-with-a-sequence.py 
+    $ python3 find_orf.py -p path-to-a-file-with-a-sequence.txt
 
 You can also specify start and stop codons with `-s` and `-x` arguments,
 respectively:
 
-    $ python3 -s AUG -x UAA UAG find_orf.py AUGGUAUAA
+    $ python3 find_orf.py -s AUG -x UAA -x UAG AUGGUAUAA
 
 All of this command-line interface is specified and handled in the `main`
 function of `find_orf.py` using the `argparse` package.
