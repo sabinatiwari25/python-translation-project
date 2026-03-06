@@ -2,6 +2,17 @@
 
 import sys
 
+def pop_next_codon(sequence):
+    """Removes and returns the first 3 bases.
+
+    Returns a tuple of a string of the first three bases and a string of the
+    remaining sequence.
+    """
+    codon = sequence[0:3]
+    remaining_seq = sequence[3:]
+    return codon, remaining_seq
+
+
 def translate_sequence(rna_sequence, genetic_code):
     """Translates a sequence of RNA into a sequence of amino acids.
 
