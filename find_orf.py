@@ -207,10 +207,9 @@ def find_first_orf(sequence,
     # exactly. Change `orf_pattern_str` so that it will match any open reading
     # frame.
     # Read the docstring above for additional clues.
-    orf_pattern_str = r'(' + '|'.join(start_codons) + ')([AUGC]{3})*(' + '|'.join(stop_codons) + ')'
-    
+    orf_pattern_str = r'(' + '|'.join(start_codons) + ')([AUGC]{3})*(' + '|'.join(stop_codons) + ')'    
     ##########################################################################
-
+    #Thsline is building a regular expression to find open reading frames(ORFs) in an RNA sequence. 
     # Create the regular expression object
     orf_pattern = re.compile(orf_pattern_str)
     # Search the sequence
@@ -307,3 +306,4 @@ def main():
 
 if __name__ == '__main__':
     main()
+#
